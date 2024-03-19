@@ -50,3 +50,48 @@
   
   export default App
   
+
+
+
+
+  {
+
+    const dataTab = data;
+    {
+      dataTab.map((movies) => {
+        // console.log(movies);//tableau des cats et images
+        // console.log(movies.category);//category
+        //  console.log(movies.images);//tableau images
+
+        movies.images.map((pictures) => {
+          console.log(pictures);//images
+        });
+
+        return (
+          <div>
+
+            <img src={movies.images} alt={movies.title} />
+            <p>{movies.title}</p>
+          </div>
+        )
+      })
+    };
+
+    return (
+      <>
+        <header>
+          <h1>NETFLIX</h1>
+        </header>
+        <main>
+          {data.map(category => (
+            <article>
+              <h2>{category.category}</h2>
+
+
+            </article>
+          ))};
+        </main>
+      </>
+    )
+  }
+};

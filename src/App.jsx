@@ -2,27 +2,7 @@
 import './App.css'
 import data from "./assets/data.json"
 function App() {
-
   {
-
-    const dataTab = data;
-    {
-      dataTab.map((movies) => {
-        // console.log(movies);//tableau des cats et images
-        // console.log(movies.category);//category
-        //  console.log(movies.images);//tableau images
-
-        movies.images.map((pictures) => {
-          console.log(pictures);//images
-        });
-
-        return (
-          <h2>{movies.category}</h2>
-
-        )
-      })
-    };
-
     return (
       <>
         <header>
@@ -30,11 +10,18 @@ function App() {
         </header>
         <main>
           {data.map(category => (
-            <article>
+            <article key={category.category}>
               <h2>{category.category}</h2>
-              {category.images}
+              <div className="movie-list">
+                {category.images.map(movie => (
+                  <div key={movie.id} className="movie">
+                    <img src={movie.img} alt={movie.title} />
+                    <p>{movie.title}</p>
+                  </div>
+                ))}
+              </div>
             </article>
-          ))};
+          ))}
         </main>
       </>
     )
