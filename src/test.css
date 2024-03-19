@@ -1,0 +1,52 @@
+/*function App() {
+
+    {
+      const renderMovieList = (movies) => {
+        return (
+          <div className="movie-list">
+            {/* Création des films pour chaque catégorie }
+            {movies.map(movie => (
+              <div key={movie.id} className="movie">
+                <img src={movie.img} alt={movie.title} />
+                <p>{movie.title}</p>
+              </div>
+            ))}
+          </div>
+        );
+      };
+  
+      const dataTab = data;
+      {
+        dataTab.map((movies) => {
+          // console.log(movies);//tableau des cats et images
+          // console.log(movies.category);//category
+          //  console.log(movies.images);//tableau images
+  
+          movies.images.map((pictures) => {
+            console.log(pictures);//images
+          });
+  
+          return (
+            <h2>{movies.category}</h2>
+  
+          )
+        })
+      };
+  
+      return (
+        <>
+          <header>
+            <h1>NETFLIX</h1>
+          </header>
+          <main>
+            <article>
+  
+            </article>
+          </main>
+        </>
+      )
+    }
+  };
+  
+  export default App
+  

@@ -11,7 +11,7 @@ h1 {
 }
 
 main {
-    height: 600px;
+    min-height: 100vh;
     background: black;
 }
 
